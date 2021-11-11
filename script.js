@@ -18,7 +18,7 @@ function createProduct(parent, ImgUrl, productTitle, textPrice){
         totalCart += textPrice;
         cartEl.textContent = `${totalCart} €`;
         },
-        {once: true}
+        {once: true} //Ogni articolo si può aggiungere solo una volta
     );
 }
 
@@ -71,3 +71,5 @@ function renderProducts(parent){
 renderProducts(wrapperProducts);
 renderProducts(secondWrapperProducts);
 renderProducts(thirdWrapperProducts);
+
+console.log(wrapperProducts.childNodes);
