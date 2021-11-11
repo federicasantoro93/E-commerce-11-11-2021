@@ -34,6 +34,21 @@ img{
     height: 38vh;
     display:flex;
     overflow-y: hidden;
+    margin: 0 40px;
+}
+
+.second__wrapper__products{
+    height: 38vh;
+    display:flex;
+    overflow-y: hidden;
+    margin: 0 40px;
+}
+
+.third__wrapper__products{
+    height: 38vh;
+    display:flex;
+    overflow-y: hidden;
+    margin: 0 40px;
 }
 
 .product{

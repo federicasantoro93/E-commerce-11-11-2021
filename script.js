@@ -29,8 +29,30 @@ function createText(parent, productTitle, textPrice){
 }
 
 const wrapperProducts = document.querySelector(".wrapper__products");
+const secondWrapperProducts = document.querySelector(".second__wrapper__products");
+const thirdWrapperProducts = document.querySelector(".third__wrapper__products");
 
 
 products.map(product =>{
     createProduct(wrapperProducts, product.image, product.title, product.price);
 })
+
+products.map(product =>{
+    createProduct(secondWrapperProducts, product.image, product.title, product.price);
+})
+
+products.map(product =>{
+    createProduct(thirdWrapperProducts, product.image, product.title, product.price);
+})
+
+
+/*
+function render(parent){
+    products.map(product =>{
+        createProduct(parent, product.image, product.title, product.price);
+    });
+}
+
+render(secondWrapperProducts);
+render(thirdWrapperProducts);
+*/
