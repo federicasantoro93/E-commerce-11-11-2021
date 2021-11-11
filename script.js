@@ -1,47 +1,36 @@
 import {products} from "./data.js";
 //console.log(products);
 
-function createProduct(parent, ImgUrl, imgTitle){
+function createProduct(parent, ImgUrl, productTitle, textPrice){
     const product = document.createElement("div");
     product.className = "product";
 
-    createImg(product, ImgUrl, imgTitle, textTitle, textPrice);
-    createText(product, textTitle, textPrice);
+    createImg(product, ImgUrl, productTitle);
+    createText(product, productTitle, textPrice);
     parent.appendChild(product);
 }
 
-function createImg(parent, imgUrl, imgTitle) {
+function createImg(parent, imgUrl, productTitle) {
     const image = document.createElement("img");
     image.src = imgUrl;
-    image.alt = imgTitle;
+    image.alt = productTitle;
 
     parent.appendChild(image);
 }
 
-function createText(parent, textTitle, textPrice){
+function createText(parent, productTitle, textPrice){
     const title = document.createElement('h4');
-    title.textContent = textTitle;
+    title.textContent = productTitle;
 
     const price = document.createElement('p');
-    price.textContent = textPrice;
+    price.textContent = `${textPrice} €`;
 
     parent.append(title, price);
 }
 
-const wrapperProducts = document.querySelector('.wrapper__products');
-const imgUrl = "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg";
-const textTitle = "Fjallravct - Foldsack No. 1 Backpack, Fits 15 Laptops";
-const textPrice = 109
-createProduct(wrapperProducts, imgUrl, textTitle, textTitle, textPrice);
+const wrapperProducts = document.querySelector(".wrapper__products");
 
 
-
-
-
-/*
-<div class="produ
-    <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-    <h4>Fjallravct - Foldsack No. 1 Backpack, Fits 15 Laptops</h4>
-    <p>109.95 €</p>
-</div>
-*/
+products.map(product =>{
+    createProduct(wrapperProducts, product.image, product.title, product.price);
+})

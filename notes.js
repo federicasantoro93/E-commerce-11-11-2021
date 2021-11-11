@@ -1,5 +1,9 @@
 /*
-Lo slider scorre con la barra
-Il carosello ha dei bottoni
+
+Per spostare lo slider da giù a su:
+.wrapper__products{
+    overflow-y: hidden;
+}
+
 
 */
