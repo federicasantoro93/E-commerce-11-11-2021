@@ -1,3 +1,72 @@
-h1{
-    color:red;
+body{
+    background-color: white;
+    color:#0c0b0c;
+    
+    font-family: 'Poppins', sans-serif;
 }
+.wrapper{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+   }
+
+.wrapper__titles {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper__titles h2{
+    font-size: 2rem;
+}
+
+.wrapper__titles h4{
+    font-size: 0.9rem;
+}
+
+.wrapper__products{
+    border: 1px solid blue;
+    height: 35vh;
+    display:flex;
+}
+
+.product{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    padding: 10px;
+
+    max-width: 150px;
+    
+    border: 2px solid #0c0b0c;
+    border-radius: 12px;
+
+
+    color: #0c0b0c;
+}
+
+img{
+    width: 130px;
+    
+}
+
+.product h4{
+    margin: 10px 0 0;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: regular;
+    
+}
+.product p{
+    font-weight: 600;
+    font-size: semi-bold;
+}
+
+/*
+.addBtn{
+    width: 100px;
+}
+*/

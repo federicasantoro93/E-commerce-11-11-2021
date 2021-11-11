@@ -1,0 +1,5 @@
+/*
+Lo slider scorre con la barra
+Il carosello ha dei bottoni
+
+*/
