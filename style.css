@@ -9,13 +9,21 @@ img{
     width: 90px;
 }
 
+.cart{
+    text-align: right;
+    width: 100px;
+    border: 2px solid red;
+}
+
 .wrapper{
     display: flex;
     flex-direction: column;
 
     justify-content: center;
 
-   }
+}
+
+
 
 .wrapper__titles {
     display: flex;

@@ -1,6 +1,9 @@
 import {products} from "./data.js";
 //console.log(products);
 
+let product = [];
+let totalCart = 0;
+
 function createProduct(parent, ImgUrl, productTitle, textPrice){
     const product = document.createElement("div");
     product.className = "product";
@@ -8,6 +11,15 @@ function createProduct(parent, ImgUrl, productTitle, textPrice){
     createImg(product, ImgUrl, productTitle);
     createText(product, productTitle, textPrice);
     parent.appendChild(product);
+
+    product.addEventListener(
+        'click', 
+        () => {
+        totalCart += textPrice;
+        cartEl.textContent = `${totalCart} €`;
+        },
+        {once: true}
+    );
 }
 
 function createImg(parent, imgUrl, productTitle) {
@@ -31,8 +43,10 @@ function createText(parent, productTitle, textPrice){
 const wrapperProducts = document.querySelector(".wrapper__products");
 const secondWrapperProducts = document.querySelector(".second__wrapper__products");
 const thirdWrapperProducts = document.querySelector(".third__wrapper__products");
+const cartEl = document.querySelector(".cart");
 
 
+/*
 products.map(product =>{
     createProduct(wrapperProducts, product.image, product.title, product.price);
 })
@@ -45,14 +59,15 @@ products.map(product =>{
     createProduct(thirdWrapperProducts, product.image, product.title, product.price);
 })
 
+*/
 
-/*
-function render(parent){
+//UNICA FUNZIONE
+function renderProducts(parent){
     products.map(product =>{
         createProduct(parent, product.image, product.title, product.price);
     });
 }
 
-render(secondWrapperProducts);
-render(thirdWrapperProducts);
-*/
+renderProducts(wrapperProducts);
+renderProducts(secondWrapperProducts);
+renderProducts(thirdWrapperProducts);
